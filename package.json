@@ -1,0 +1,14 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A command-line application that generates an HTML document",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
