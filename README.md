@@ -16,6 +16,12 @@ The application will be invoked by using the following command:
 node index.js
 ```
 
+Alternatively, you can use:
+
+```bash
+npm start
+```
+
 ## Screenshot
 
 ![A webpage is generated with cards for each team member](./assets/images/)
