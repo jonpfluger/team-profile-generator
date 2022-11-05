@@ -1,5 +1,3 @@
-const answersArr = require(./index.js)
-
 const generateHTML = () => {
     return `
 <!DOCTYPE html>
@@ -22,39 +20,39 @@ const generateHTML = () => {
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="card-title">${answersArr[0].managerName}</h5>
-                        <h6 class="card-subtitle">Team Manager</h6>
+                        <h5 class="card-title">${mgmt.name}</h5>
+                        <h6 class="card-subtitle">${mgmt.role}</h6>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Employee ID: ${answersArr[0].managerID}</p>
-                        <p>Email: <a href="#" class="card-link">${answersArr[0].managerEmail}</a></p>
-                        <p>Office Number: <a href="#" class="card-link">${answersArr[0].managerOfficeNumber}</a></p>
+                        <p class="card-text">Employee ID: ${mgmt.id}</p>
+                        <p>Email: <a href="#" class="card-link">${mgmt.email}</a></p>
+                        <p>Office Number: <a href="#" class="card-link">${mgmt.officeNumber}</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="card-title">${answersArr[1].engineerName}</h5>
-                        <h6 class="card-subtitle">Engineer</h6>
+                        <h5 class="card-title">${eng.name}</h5>
+                        <h6 class="card-subtitle">${eng.role}</h6>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Employee ID: ${answersArr[1].engineerID}</p>
-                        <p>Email: <a href="#" class="card-link">${answersArr[1].engineerEmail}</a></p>
-                        <p>GitHub: <a href="#" class="card-link">${answersArr[1].engineerGithub}</a></p>
+                        <p class="card-text">Employee ID: ${eng.id}</p>
+                        <p>Email: <a href="mailto:${eng.email}" class="card-link">${eng.email}</a></p>
+                        <p>GitHub: <a href="${eng.github}" class="card-link">${eng.github}</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="card-title">${answersArr[2].internName}</h5>
-                        <h6 class="card-subtitle">Intern</h6>
+                        <h5 class="card-title">${int.name}</h5>
+                        <h6 class="card-subtitle">${int.role}</h6>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Employee ID: ${answersArr[2].internID}</p>
-                        <p>Email: <a href="#" class="card-link">${answersArr[2].internEmail}</a></p>
-                        <p>School: <a href="#" class="card-link">${answersArr[2].internSchool}</a></p>
+                        <p class="card-text">Employee ID: ${int.id}</p>
+                        <p>Email: <a href="mailto:${int.name}" class="card-link">${int.email}</a></p>
+                        <p>School: ${int.school}</p>
                     </div>
                 </div>
             </div>

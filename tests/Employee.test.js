@@ -1,17 +1,48 @@
-/*
-The first class is an Employee parent class with the following properties and methods:
+const Employee = require('../lib/Employee')
 
-name
+// Arrange
+const name = "Bob"
+const id = "123"
+const email = "bob@fakemail.com"
 
-id
+// Act
+const employee = new Employee(name, id, email)
 
-email
+describe("sample", () => {
+    it("Returns an Employee object", () => {
+        // Assert
+        expect(employee instanceof Employee).toBe(true)
+    })
 
-getName()
+    it ("Has the correct name", () => {
+        expect(employee.name).toBe(name)
+    })
 
-getId()
+    it ("Returns the correct name", () => {
+        expect(employee.getName()).toBe(name)
+    })
 
-getEmail()
+    it ("Has the correct id", () => {
+        expect(employee.id).toBe(id)
+    })
 
-getRole()—returns 'Employee'
-*/
+    it ("Returns the correct id", () => {
+        expect(employee.getID()).toBe(id)
+    })
+
+    it ("Has the correct email", () => {
+        expect(employee.email).toBe(email)
+    })
+
+    it ("Returns the correct email", () => {
+        expect(employee.getEmail()).toBe(email)
+    })
+
+    it ("Has the correct role", () => {
+        expect(employee.role).toBe("Employee")
+    })
+
+    it ("Returns the correct role", () => {
+        expect(employee.getRole()).toBe("Employee")
+    })
+})

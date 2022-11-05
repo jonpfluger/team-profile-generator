@@ -1,9 +1,33 @@
-/* 
-In addition to Employee's properties and methods, Engineer will also have the following:
+const Engineer = require('../lib/Engineer')
 
-github—GitHub username
+// Arrange
+const name = "Bob"
+const id = "123"
+const email = "bob@fakemail.com"
+const github = "github.com/bob"
 
-getGithub()
+// Act
+const engineer = new Engineer(name, id, email, github)
 
-getRole()—overridden to return 'Engineer'
-*/
+describe("sample", () => {
+    it("Returns an Engineer object", () => {
+        // Assert
+        expect(engineer instanceof Engineer).toBe(true)
+    })
+
+    it ("Has the correct github", () => {
+        expect(engineer.github).toBe(github)
+    })
+
+    it ("Returns the correct github", () => {
+        expect(engineer.getGithub()).toBe(github)
+    })
+
+    it ("Has the correct role", () => {
+        expect(engineer.role).toBe("Engineer")
+    })
+
+    it ("Returns the correct role", () => {
+        expect(engineer.getRole()).toBe("Engineer")
+    })
+})
