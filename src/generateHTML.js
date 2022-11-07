@@ -1,5 +1,86 @@
-const generateHTML = () => {
+const generateHTML = (teamArray) => {
+    const cardArray = []
+
+    mgmtCard = (mgmt) => {
+        return `
+
+        
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title">${mgmt.name}</h5>
+                    <h6 class="card-subtitle">${mgmt.role}</h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Employee ID: ${mgmt.id}</p>
+                    <p>Email: <a href="mailto:${mgmt.email}" class="card-link">${mgmt.email}</a></p>
+                    <p>Office Number: <a href="#" class="card-link">${mgmt.officeNumber}</a></p>
+                </div>
+            </div>
+        </div>
+
+        `
+    }
+
+    engCard = (eng) => {
+        return `
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title">${eng.name}</h5>
+                    <h6 class="card-subtitle">${eng.role}</h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Employee ID: ${eng.id}</p>
+                    <p>Email: <a href="mailto:${eng.email}" class="card-link">${eng.email}</a></p>
+                    <p>GitHub: <a href="https://github.com/${eng.github}" class="card-link">${eng.github}</a></p>
+                </div>
+            </div>
+        </div>
+
+        
+        `
+    }
+
+    intCard = (int) => {
+        return `
+        
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title">${int.name}</h5>
+                    <h6 class="card-subtitle">${int.role}</h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Employee ID: ${int.id}</p>
+                    <p>Email: <a href="mailto:${int.name}" class="card-link">${int.email}</a></p>
+                    <p>School: ${int.school}</p>
+                </div>
+            </div>
+        </div>
+        
+        `
+    }
+
+    teamArray.forEach(function(teamMember) {
+        if (teamMember.getRole() === "Manager") {
+            cardArray.push(mgmtCard(teamMember))
+        } else if (teamMember.getRole() === "Engineer") {
+            cardArray.push(engCard(teamMember))
+        } else if (teamMember.getRole() === "Intern") {
+            cardArray.push(intCard(teamMember))
+        }
+    })
+
+
+
+    return cardArray.join('')
+}
+
+module.exports = (teamArray) => {
     return `
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,45 +98,7 @@ const generateHTML = () => {
 
     <div class="container">
         <div class="row g-3">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="card-title">${mgmt.name}</h5>
-                        <h6 class="card-subtitle">${mgmt.role}</h6>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Employee ID: ${mgmt.id}</p>
-                        <p>Email: <a href="#" class="card-link">${mgmt.email}</a></p>
-                        <p>Office Number: <a href="#" class="card-link">${mgmt.officeNumber}</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="card-title">${eng.name}</h5>
-                        <h6 class="card-subtitle">${eng.role}</h6>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Employee ID: ${eng.id}</p>
-                        <p>Email: <a href="mailto:${eng.email}" class="card-link">${eng.email}</a></p>
-                        <p>GitHub: <a href="${eng.github}" class="card-link">${eng.github}</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="card-title">${int.name}</h5>
-                        <h6 class="card-subtitle">${int.role}</h6>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Employee ID: ${int.id}</p>
-                        <p>Email: <a href="mailto:${int.name}" class="card-link">${int.email}</a></p>
-                        <p>School: ${int.school}</p>
-                    </div>
-                </div>
-            </div>
+            ${generateHTML(teamArray)}
         </div>
     </div>
     
@@ -63,5 +106,3 @@ const generateHTML = () => {
 </html>
     `
 }
-
-module.exports = generateHTML

@@ -24,7 +24,7 @@ npm start
 
 ## Screenshot
 
-![A webpage is generated with cards for each team member](./assets/images/)
+![A webpage is generated with cards for each team member](./assets/images/sample-screenshot.png)
 
 ## Questions
 
