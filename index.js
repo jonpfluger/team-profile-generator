@@ -140,5 +140,5 @@ const promptNextEmployee = () => {
     })
 }
 
-// initialize the prompt
+// initialize the first prompt
 promptManager()

@@ -26,6 +26,10 @@ npm start
 
 ![A webpage is generated with cards for each team member](./assets/images/sample-screenshot.png)
 
+## Video Tutorial
+
+https://app.castify.com/watch/41919d2e-6ea6-4dd9-926f-eb47ac9a6e33
+
 ## Questions
 
 For any questions, please feel free to contact me at jonpfluger718@gmail.com or check me out at https://github.com/jonpfluger .

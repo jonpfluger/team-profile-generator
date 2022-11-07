@@ -14,7 +14,7 @@ const generateHTML = (teamArray) => {
                 <div class="card-body">
                     <p class="card-text">Employee ID: ${mgmt.id}</p>
                     <p>Email: <a href="mailto:${mgmt.email}" class="card-link">${mgmt.email}</a></p>
-                    <p>Office Number: <a href="#" class="card-link">${mgmt.officeNumber}</a></p>
+                    <p class="card-text">Office Number: ${mgmt.officeNumber}</p>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ const generateHTML = (teamArray) => {
                 <div class="card-body">
                     <p class="card-text">Employee ID: ${int.id}</p>
                     <p>Email: <a href="mailto:${int.name}" class="card-link">${int.email}</a></p>
-                    <p>School: ${int.school}</p>
+                    <p class="card-text">School: ${int.school}</p>
                 </div>
             </div>
         </div>
