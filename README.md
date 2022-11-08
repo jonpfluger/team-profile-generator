@@ -8,6 +8,8 @@ A user can quickly and easily generate a team profile HTML document by using a c
 
 This application uses [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4) and [Jest](https://jestjs.io/).
 
+*Note: Uses inquirer version 8.2.4 specifically.
+
 ## Usage
 
 The application will be invoked by using the following command:
