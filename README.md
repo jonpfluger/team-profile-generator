@@ -30,7 +30,7 @@ npm start
 
 ## Video Tutorial
 
-https://app.castify.com/watch/41919d2e-6ea6-4dd9-926f-eb47ac9a6e33
+https://app.castify.com/view/41919d2e-6ea6-4dd9-926f-eb47ac9a6e33
 
 ## Questions
 
